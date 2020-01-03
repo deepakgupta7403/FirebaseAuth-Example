@@ -1,4 +1,4 @@
 package com.example.firebaseauthexample.activity;
 
-public class UserPassAuthActivity {
+public class EmailAuthActivity {
 }

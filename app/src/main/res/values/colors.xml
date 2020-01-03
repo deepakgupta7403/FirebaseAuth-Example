@@ -19,4 +19,14 @@
 
 
     <color name="transparent">#00000000</color>
+
+    <!--//////////////////////////////////////////////////////////// Auth Option Button BG Color ////////////////////////////////////////////////////////////-->
+
+    <color name="blueberry">#4186F4</color>
+    <color name="red_salsa">#FF3548</color>
+    <color name="fb_blue">#3B5999</color>
+    <color name="blue_jeans">#55ACEF</color>
+    <color name="git_black">#191717</color>
+    <color name="blue_younder">#4C75A3</color>
+    <color name="yahoo_purple">#51179A</color>
 </resources>

@@ -1,7 +1,5 @@
 package com.example.firebaseauthexample.activity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,20 +10,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.firebaseauthexample.R;
 import com.example.firebaseauthexample.model.AuthOptionModel;
 import com.example.firebaseauthexample.utils.MyUtils;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Context context;
@@ -56,33 +48,73 @@ public class MainActivity extends AppCompatActivity {
         AuthOptionModel authOptionModel = new AuthOptionModel();
         authOptionModel.setAuthText(getString(R.string.signin_with_phone));
         authOptionModel.setAuthIcon(R.drawable.icon_auth_phone);
-        authOptionModel.setAuthTextColor(R.color.black_ultra_low_emphasis);
-        authOptionModel.setAuthBackGroundColor(R.color.white);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.blueberry);
         authOptionModel.setAuthClass(MobileAuthActivity.class);
         authOptionModels.add(authOptionModel);
 
         authOptionModel = new AuthOptionModel();
         authOptionModel.setAuthText(getString(R.string.signin_with_email));
         authOptionModel.setAuthIcon(R.drawable.icon_auth_email);
-        authOptionModel.setAuthTextColor(R.color.black_ultra_low_emphasis);
-        authOptionModel.setAuthBackGroundColor(R.color.white);
-        authOptionModel.setAuthClass(MobileAuthActivity.class);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.red_salsa);
+        authOptionModel.setAuthClass(EmailAuthActivity.class);
         authOptionModels.add(authOptionModel);
 
         authOptionModel = new AuthOptionModel();
-        authOptionModel.setAuthText(getString(R.string.signin_with_email));
-        authOptionModel.setAuthIcon(R.drawable.icon_auth_email);
-        authOptionModel.setAuthTextColor(R.color.black_ultra_low_emphasis);
+        authOptionModel.setAuthText(getString(R.string.signin_with_google));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_google);
+        authOptionModel.setAuthTextColor(R.color.black_low_emphasis);
         authOptionModel.setAuthBackGroundColor(R.color.white);
-        authOptionModel.setAuthClass(MobileAuthActivity.class);
+        authOptionModel.setAuthClass(GoogleAuthActivity.class);
         authOptionModels.add(authOptionModel);
 
         authOptionModel = new AuthOptionModel();
-        authOptionModel.setAuthText(getString(R.string.signin_with_email));
-        authOptionModel.setAuthIcon(R.drawable.icon_auth_email);
-        authOptionModel.setAuthTextColor(R.color.black_ultra_low_emphasis);
+        authOptionModel.setAuthText(getString(R.string.signin_with_facebook));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_facebook);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.fb_blue);
+        authOptionModel.setAuthClass(FacebookAuthActivity.class);
+        authOptionModels.add(authOptionModel);
+
+        authOptionModel = new AuthOptionModel();
+        authOptionModel.setAuthText(getString(R.string.signin_with_twitter));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_twitter);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.blue_jeans);
+        authOptionModel.setAuthClass(TwitterAuthActivity.class);
+        authOptionModels.add(authOptionModel);
+
+        authOptionModel = new AuthOptionModel();
+        authOptionModel.setAuthText(getString(R.string.signin_with_github));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_github);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.git_black);
+        authOptionModel.setAuthClass(GithubAuthActivity.class);
+        authOptionModels.add(authOptionModel);
+
+        authOptionModel = new AuthOptionModel();
+        authOptionModel.setAuthText(getString(R.string.signin_with_mslive));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_mslive);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.blue_younder);
+        authOptionModel.setAuthClass(MSLiveAuthActivity.class);
+        authOptionModels.add(authOptionModel);
+
+        authOptionModel = new AuthOptionModel();
+        authOptionModel.setAuthText(getString(R.string.signin_with_yahoo));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_yahoo);
+        authOptionModel.setAuthTextColor(R.color.white);
+        authOptionModel.setAuthBackGroundColor(R.color.yahoo_purple);
+        authOptionModel.setAuthClass(YahooAuthActivity.class);
+        authOptionModels.add(authOptionModel);
+
+        authOptionModel = new AuthOptionModel();
+        authOptionModel.setAuthText(getString(R.string.signin_with_play_games));
+        authOptionModel.setAuthIcon(R.drawable.icon_auth_play_games);
+        authOptionModel.setAuthTextColor(R.color.black_low_emphasis);
         authOptionModel.setAuthBackGroundColor(R.color.white);
-        authOptionModel.setAuthClass(MobileAuthActivity.class);
+        authOptionModel.setAuthClass(PlayGamesAuthActivity.class);
         authOptionModels.add(authOptionModel);
 
     }
@@ -111,7 +143,11 @@ public class MainActivity extends AppCompatActivity {
             vh.cv_auth_option.setCardBackgroundColor(getResources().getColor(authOptionModel.getAuthBackGroundColor()));
             vh.iv_auth_image.setImageResource(authOptionModel.getAuthIcon());
             vh.tv_auth_text.setText(authOptionModel.getAuthText());
-            vh.tv_auth_text.setTextColor(authOptionModel.getAuthTextColor());
+            vh.tv_auth_text.setTextColor(getResources().getColor(authOptionModel.getAuthTextColor()));
+
+            vh.itemView.setOnClickListener(v->{
+
+            });
 
         }
 
