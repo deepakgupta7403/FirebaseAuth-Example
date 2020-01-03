@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -146,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
             vh.tv_auth_text.setTextColor(getResources().getColor(authOptionModel.getAuthTextColor()));
 
             vh.itemView.setOnClickListener(v->{
-
+                Intent intent = new Intent(context,authOptionModel.getAuthClass());
+                startActivity(intent);
             });
 
         }
