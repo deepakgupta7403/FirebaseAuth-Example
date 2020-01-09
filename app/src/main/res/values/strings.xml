@@ -10,4 +10,12 @@
     <string name="signin_with_play_games">Sign in with Play Games</string>
     <string name="signin_with_phone">Sign in with Phone</string>
 
+    <string name="phone_no_description" translatable="false">Enter your Mobile number</string>
+    <string name="india_country_code" translatable="false">+91</string>
+    <string name="mobile_number" translatable="false">Mobile Number</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="phone_auth_verif">Tap Next to verify your account with your phone number. You don\'t need to manualy enter verification code if the number install in this phone...</string>
+
+
+
 </resources>

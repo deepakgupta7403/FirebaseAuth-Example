@@ -26,17 +26,25 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Add the Firebase SDK for Google Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.2.0'
 
-    implementation 'androidx.cardview:cardview:1.0.0'                           //CardView Material Dependencies (AndroidX)
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'                                  // Add the Firebase SDK for Google Analytics
 
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'                   //Recyclerview Material Dependencies (AndroidX)
+    implementation 'com.google.firebase:firebase-auth:19.2.0'                                       // Add Firebase Auth Dependencies
+
+    implementation 'androidx.cardview:cardview:1.0.0'                                               //CardView Material Dependencies (AndroidX)
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'                                       //Recyclerview Material Dependencies (AndroidX)
+
+    implementation 'com.google.android.material:material:1.2.0-alpha03'                             //Google Material Dependencies (AndroidX)
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'                                        //v4 Support Material Dependencies (AndroidX)
+
+    implementation 'com.chaos.view:pinview:1.4.3'                                                   // MobileAuth OTP PinView Dependencies
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,6 +1,7 @@
 package com.example.firebaseauthexample.activity;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
