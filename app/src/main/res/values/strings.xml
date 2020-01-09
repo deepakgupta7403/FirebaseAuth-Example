@@ -14,7 +14,9 @@
     <string name="india_country_code" translatable="false">+91</string>
     <string name="mobile_number" translatable="false">Mobile Number</string>
     <string name="next" translatable="false">Next</string>
-    <string name="phone_auth_verif">Tap Next to verify your account with your phone number. You don\'t need to manualy enter verification code if the number install in this phone...</string>
+    <string name="phone_auth_verif">Tap Next to verify your phone number. You need to manually enter verification code to next screen</string>
+    <string name="code_sent_to">Enter code that was sent to</string>
+    <string name="didnot_get_code">I didn\'t get a code</string>
 
 
 

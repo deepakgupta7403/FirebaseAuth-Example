@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    >
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +14,8 @@
             android:id="@+id/ll_phone_number_input_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -111,5 +111,78 @@
             </RelativeLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_otp_verification_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blueberry"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="16dp"
+                android:text="@string/code_sent_to"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/signin_with_phone"
+                android:textColor="@color/fiery_rose" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:cursorVisible="false"
+                app:cursorColor="@color/colorAccent"
+                app:cursorWidth="2dp"
+                app:itemCount="6"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="36dp"
+                app:lineColor="@color/white"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+            <TextView
+                android:layout_marginTop="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+
+                android:text="@string/didnot_get_code"
+                android:textColor="@color/gargoyle_das" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
