@@ -1,4 +1,9 @@
-# FirebaseAuth-Example
+<h1 align="center">
+  <br>
+  <a href="https://firebase.google.com/products/auth/"><img src="https://github.com/deepakgupta7403/FirebaseAuth-Example/blob/master/app/src/main/res/drawable/firebase_auth.png" alt="Firebase Authentication" width="500"></a>
+</h1>
+<h1 align="center">Firebase Authentication</h1>
+
 ### What is Firebase
 Firebase is a mobile and web application development platform developed by Firebase, Inc. in 2011, then acquired by Google in 2014.As of October 2018, the Firebase platform has 18 products,which are used by 1.5 million apps.
 Firebase's first product was the Firebase Real-time Database, an API that synchronizes application data across iOS, Android, and Web devices, and stores it on Firebase's cloud. The product assists software developers in building real-time, collaborative applications.
