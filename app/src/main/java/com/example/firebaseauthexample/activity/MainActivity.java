@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         addDataToList();
 
-        rv_auth_option = (RecyclerView) findViewById(R.id.rv_auth_option);
+        rv_auth_option = findViewById(R.id.rv_auth_option);
         recyclerViewAdapter = new RecyclerViewAdapter(authOptionModels);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -132,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final MyViewHolder vh, int position) {
             AuthOptionModel authOptionModel = mList.get(position);
-
 
             CardView.LayoutParams layoutParams = new CardView.LayoutParams(
                     CardView.LayoutParams.MATCH_PARENT,
