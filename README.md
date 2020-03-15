@@ -44,7 +44,7 @@ Firebase Authentication integrates tightly with other Firebase services, and it 
   8. MSLive Account based Authentication
   9. Play Games Account based Authentication
 
-### Here is step achieve authentication.
+### Here is step to ADD Firebase and Firebase SDK to android project.
   1. Create one Android project in Android Studio. 
   2. Login to Firebase and goTo Firebase Console.
   <p ><img src="assets/image/firebase_console.png" alt="Screenshots"/></p>
