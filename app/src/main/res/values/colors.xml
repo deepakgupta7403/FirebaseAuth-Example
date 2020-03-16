@@ -32,4 +32,11 @@
     <color name="gargoyle_das">#FFE74C</color>
     <color name="fiery_rose">#FF5964</color>
 
+
+    <!--//////////////////////////////////////////////////////////// OTP View Colour ////////////////////////////////////////////////////////////-->
+    <color name="grey">#666666</color>
+    <color name="red">#FF0000</color>
+    <color name="whiteoff">#606060</color>
+    <color name="green">#4499CC00</color>
+
 </resources>

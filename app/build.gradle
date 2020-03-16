@@ -45,6 +45,8 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'                                        //v4 Support Material Dependencies (AndroidX)
 
-    implementation 'com.chaos.view:pinview:1.4.3'                                                   // MobileAuth OTP PinView Dependencies
+
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'                               // Google Auth Dependencies for Device Mobile N0. Popup
+
 }
 apply plugin: 'com.google.gms.google-services'

@@ -69,7 +69,7 @@
                             app:boxStrokeColor="@color/blueberry">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/tiet_title"
+                                android:id="@+id/tiet_mobile_number"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:backgroundTint="@color/blueberry"
@@ -142,27 +142,27 @@
                 android:text="@string/signin_with_phone"
                 android:textColor="@color/fiery_rose" />
 
-            <com.chaos.view.PinView
-                android:id="@+id/pinView"
-                style="@style/PinWidget.PinView"
+            <com.example.firebaseauthexample.customview.OTPView.OtpTextView
+                android:id="@+id/otp_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:padding="10dp"
-                android:layout_marginTop="40dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:cursorVisible="false"
-                app:cursorColor="@color/colorAccent"
-                app:cursorWidth="2dp"
-                app:itemCount="6"
-                app:itemHeight="48dp"
-                app:itemRadius="4dp"
-                app:itemSpacing="10dp"
-                app:itemWidth="36dp"
-                app:lineColor="@color/white"
-                app:lineWidth="2dp"
-                app:viewType="rectangle" />
+                android:layout_marginTop="72dp"
+                android:textColor="#ffffff"
+                app:bar_active_color="@color/white"
+                app:bar_enabled="true"
+                app:bar_error_color="@color/red"
+                app:bar_height="1.5dp"
+                app:bar_inactive_color="@color/whiteoff"
+                app:bar_margin_bottom="0dp"
+                app:bar_margin_left="2dp"
+                app:bar_margin_right="2dp"
+                app:bar_success_color="@color/green"
+                app:box_margin="0dp"
+                app:height="40dp"
+                app:length="6"
+                app:otp=""
+                app:otp_text_size="14sp"
+                app:width="40dp" />
 
             <TextView
                 android:id="@+id/tv_resend_otp"
