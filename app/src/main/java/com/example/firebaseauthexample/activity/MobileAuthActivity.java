@@ -101,6 +101,19 @@ public class MobileAuthActivity extends AppCompatActivity {
             }
         });
 
+        tv_resend_otp.setOnClickListener(view -> {
+            String finalPhoneNumber;
+            String phoneNumber = tiet_mobile_number.getText().toString();
+            if (phoneNumber.contains("+91")) {
+                finalPhoneNumber = phoneNumber.replace("+91", "");
+            } else {
+                finalPhoneNumber = phoneNumber;
+            }
+
+            resendVerificationCode("+91" + finalPhoneNumber, mResendToken);
+            MyUtils.showToast(mActivity,"OTP sent to given no. once again!");
+        });
+
 
 
     }
