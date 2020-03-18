@@ -1,6 +1,7 @@
 package com.example.firebaseauthexample.activity;
 
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
@@ -43,6 +44,7 @@ public class MobileAuthActivity extends AppCompatActivity {
     public static final String TAG = MobileAuthActivity.class.getName();
 
     AppCompatActivity mActivity;
+    Context context;
     TextInputEditText tiet_mobile_number;
     LinearLayout ll_phone_number_input_view, ll_otp_verification_view;
     Button btn_send_verification;
@@ -60,6 +62,7 @@ public class MobileAuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mobile_auth_activity);
         mActivity = this;
+        context = getApplicationContext();
 
         initComponent();
 
@@ -68,8 +71,6 @@ public class MobileAuthActivity extends AppCompatActivity {
         } catch (IntentSender.SendIntentException e) {
             e.printStackTrace();
         }
-
-
 
         btn_send_verification.setOnClickListener(v -> {
             if (!validatePhoneNumber()) {
@@ -97,7 +98,6 @@ public class MobileAuthActivity extends AppCompatActivity {
             public void onOTPComplete(String otp) {
                 PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, otp);
                 signInWithPhoneAuthCredential(credential);
-                Toast.makeText(getApplicationContext(), "The OTP is " + otp, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -128,7 +128,7 @@ public class MobileAuthActivity extends AppCompatActivity {
     }
 
     private void contactHint() throws IntentSender.SendIntentException {
-        GoogleApiClient apiClient = new GoogleApiClient.Builder(mActivity)
+        GoogleApiClient apiClient = new GoogleApiClient.Builder(context)
                 .addApi(Auth.CREDENTIALS_API)
                 .build();
 
