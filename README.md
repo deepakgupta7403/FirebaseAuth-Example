@@ -34,7 +34,7 @@ Firebase's first product was the Firebase Real-time Database, an API that synchr
 Firebase Authentication integrates tightly with other Firebase services, and it leverages industry standards like OAuth 2.0 and OpenID Connect, so it can be easily integrated with your custom backend.</p>
 
 ### In this repository we learn about NINE diffrent authentication method.</p>
-  1. Mobile Number based OTP Authentication.
+  1. OTP based Mobile Number Authentication.
   2. Google Account based Authentication
   3. Facebook Account based Authentication
   4. Twitter Account based Authentication
@@ -97,6 +97,28 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 ```
 7. We're Set to start diffrent authentication option.
+
+## 1) Phone Number Authentication
+First you need to **enable** the Phone Auth Provider in Firebase Console. 
+<p ><img src="assets/image/enable_mobile_auth.png" alt="Screenshots"/></p>
+
+<p>
+  
+  For This kind of Contact hint you need to implement
+  ```gradle
+  build.gradle(App Level)
+  
+dependencies {
+    // Google Auth Dependencies for Device Mobile N0. Popup
+    implementation 'com.google.android.gms:play-services-auth:17.0.0' 
+}
+apply plugin: 'com.google.gms.google-services'
+```
+
+<img src="assets/image/contact_hint.png" alt="Screenshots" width="350" height="280"/>
+</p>
+
+Phone Number Auth All code (Contact Hint, Request OTP, Verify OTP, Resend OTP) Writen in [MobileAuthActivity](https://github.com/deepakgupta7403/FirebaseAuth-Example/blob/master/app/src/main/java/com/example/firebaseauthexample/activity/MobileAuthActivity.java) Class
   
  ### Some Important links related Firebase
   1. [Products](https://firebase.google.com/products)
